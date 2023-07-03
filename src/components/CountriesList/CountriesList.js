@@ -1,6 +1,6 @@
 import countriesData from "../../countries-data.json";
 import { useState, useEffect } from "react";
-import Link from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const CountriesList = () => {
 	const [countries, setCountries] = useState(countriesData);

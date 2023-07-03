@@ -9,3 +9,5 @@ function CountryDetails(props){
 		</div>
 	)
 }
+
+export default CountryDetails;

@@ -4,14 +4,11 @@ import NavBar from './components/Navbar/Navbar';
 import countries from "./countries-data.json";
 import { useState } from 'react';
 import CountryDetails from "./components/CountryDetails";
-import "bootstrap/dist/css/bootstrap.css";
-import axios from "axios";
 import react from "react";
 
 
 
 function App() {
-  const urlOfCountries = "https://ih-countries-api.herokuapp.com/countries";
 
   const [countries, setCountries] = useState();
   return (
