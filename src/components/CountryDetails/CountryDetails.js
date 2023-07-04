@@ -10,8 +10,6 @@ function CountryDetails(props) {
 	console.log(id);
 	console.log(props.algo, props.otraCosa);
 	{ console.log(props.countriesData) }
-	{ console.log(props.countryID) }
-	{ console.log(props) }
 
 
 
@@ -25,23 +23,29 @@ function CountryDetails(props) {
 
 			{/* <h1>{country.name.common}</h1> */}
 
-			{/* <p>{props.countryID}</p> */}
 
 
 
 
-			{/* {props.countriesData.map((country, index) => {
+			{props.countriesData.map((country, index) => {
+				const borders = country.borders;
+				// borders.map((border)=>{props.countriesData.alpha3code.filter(border); return })
+
+
+
+					;
 				return (
 					<div>
 
+						<img src={`https://flagpedia.net/data/flags/icon/72x54/${country.alpha2Code.toLowerCase()}.png`} />
 						<p>{country.name.common}</p>
 						<p>Capital: {country.capital}</p>
 						<p>Area: {country.area} km2</p>
 						<p>Borders:
-							<p>{country.borders}</p>
-							{props.countriesData.borders.map((border) => {
+							{borders.map((border)=><p><Link to={`/${country.alpha3Code}`}>{border}</Link></p>)}
+							{/* {props.countriesData.borders.map((border) => {
 								return <p><Link to={``}>{country.border}</Link></p>
-							})}
+							})} */}
 
 						</p>
 					</div>
@@ -53,7 +57,7 @@ function CountryDetails(props) {
 
 
 
-			} */}
+			}
 
 
 		</div>

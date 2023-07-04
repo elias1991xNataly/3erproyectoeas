@@ -14,8 +14,7 @@ const CountriesList = ({ countriesData }) => {
 
 
 	return (
-		<div>
-			<div className="overflow-y-scroll vh-100" >
+			<div  className="overflow-y-scroll vh-100">
 				<div id="nations" className="d-flex-column mt-10 position-relative ml-10 justify-content-start align-self-start ">
 					{countries.map((country, index) => {
 						return (
@@ -36,13 +35,11 @@ const CountriesList = ({ countriesData }) => {
 				</div>
 			</div>
 
-			<CountryDetails countryID={information} />
 
 
 
 
 
-		</div>
 	)
 };
 

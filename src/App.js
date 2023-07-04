@@ -18,10 +18,10 @@ function App() {
         <div className='row'>
 
           <CountriesList countriesData={countries} />
-        </div>
         <Routes>
           <Route path='/:id' element={<CountryDetails countriesData={countries} otraCosa="otra cosa" algo="countriesList"/>}/>
         </Routes>
+        </div>
       </div>
     </div>
   );
