@@ -1,11 +1,9 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
 function CountryDetails({ countries, info }) {
-	const { id } = useParams()
-	console.log(id);
+	
 	const [CountryInfo, setCountryInfo] = useState([]);
 	const [newCountryInfo, setNewCountryInfo] = useState([]);
 
@@ -21,9 +19,8 @@ function CountryDetails({ countries, info }) {
 
 
 	if (newCountryInfo.length !== 0) {
-		console.log(newCountryInfo);
 		return (
-			<div id="info" className="border-bottom w-50">
+			<div id="info" className="w-50">
 				<img className="w-50 p-3" src={`https://flagpedia.net/data/flags/icon/72x54/${newCountryInfo.alpha2Code.toLowerCase()}.png`} alt="countryFlag" />
 				<h3>{newCountryInfo.name.common}</h3>
 				<div className='data border-bottom'>
@@ -38,13 +35,12 @@ function CountryDetails({ countries, info }) {
 					<p>Borders</p>
 					<div>
 
-						{newCountryInfo.borders.map(country => countries.map(borderCountry => {
+						{newCountryInfo.borders.map((country,index) => countries.map(borderCountry => {
 
 							if (borderCountry.alpha3Code === country) {
-								console.log(borderCountry);
 								return (
 
-									<p>
+									<p id={`${index}`}>
 										<Link onClick={() => displayNewCountry(borderCountry)}>{borderCountry.name.common}</Link>
 
 									</p>
@@ -63,9 +59,8 @@ function CountryDetails({ countries, info }) {
 
 	}
 	else if (CountryInfo.length !== 0) {
-		console.log(CountryInfo);
 		return (
-			<div id="info" className="border-bottom w-50">
+			<div id="info" className="w-50">
 				<img className="w-50 p-3" src={`https://flagpedia.net/data/flags/icon/72x54/${CountryInfo.alpha2Code.toLowerCase()}.png`} alt="countryFlag" />
 				<h3>{CountryInfo.name.common}</h3>
 				<div className='data border-bottom'>
@@ -79,13 +74,12 @@ function CountryDetails({ countries, info }) {
 				<div className="border-bottom">
 					<p>Borders</p>
 						<div>
-							{CountryInfo.borders.map(country => countries.map(borderCountry => {
+							{CountryInfo.borders.map((country,index) => countries.map(borderCountry => {
 
 								if (borderCountry.alpha3Code === country) {
-									console.log(borderCountry);
 									return (
 
-										<p>
+										<p id={`${index}`}>
 											<Link onClick={() => displayNewCountry(borderCountry)}>{borderCountry.name.common}</Link>
 
 										</p>

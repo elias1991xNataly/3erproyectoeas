@@ -24,7 +24,7 @@ const CountriesList = ({ url }) => {
 					return (
 						<div key={index} id='main' className="border d-flex justify-content-center align-items-center align-self-center p-3">
 							<Link className="country" to={`/${country.alpha3Code}`} onClick={() => showInformation(country)}  >
-								<img  src={`https://flagpedia.net/data/flags/icon/72x54/${country.alpha2Code.toLowerCase()}.png`} />
+								<img  src={`https://flagpedia.net/data/flags/icon/72x54/${country.alpha2Code.toLowerCase()}.png`} alt="countryListFlag"/>
 								<p>{country.name.common}</p>
 							</Link>
 						</div>
