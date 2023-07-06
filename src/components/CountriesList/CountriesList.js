@@ -18,7 +18,7 @@ const CountriesList = ({ url }) => {
 	console.log(countries);
 
 	return (
-		<div className="overflow-y-scroll vh-100 d-flex justify-content-around">
+		<div className="overflow-y-scroll vh-100 d-flex justify-content-start position-relative">
 			<div id="nations" className="w-25 ">
 				{countries.map((country, index) => {
 					return (

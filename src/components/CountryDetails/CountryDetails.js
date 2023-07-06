@@ -20,7 +20,7 @@ function CountryDetails({ countries, info }) {
 
 	if (newCountryInfo.length !== 0) {
 		return (
-			<div id="info" className="w-50">
+			<div id="info" className="w-50 position-fixed top-40 start-50 translate-right">
 				<img className="w-50 p-3" src={`https://flagpedia.net/data/flags/icon/72x54/${newCountryInfo.alpha2Code.toLowerCase()}.png`} alt="countryFlag" />
 				<h3>{newCountryInfo.name.common}</h3>
 				<div className='data border-bottom'>
@@ -60,7 +60,7 @@ function CountryDetails({ countries, info }) {
 	}
 	else if (CountryInfo.length !== 0) {
 		return (
-			<div id="info" className="w-50">
+			<div id="info" className="w-50 position-fixed top-40 start-50 translate-right">
 				<img className="w-50 p-3" src={`https://flagpedia.net/data/flags/icon/72x54/${CountryInfo.alpha2Code.toLowerCase()}.png`} alt="countryFlag" />
 				<h3>{CountryInfo.name.common}</h3>
 				<div className='data border-bottom'>
