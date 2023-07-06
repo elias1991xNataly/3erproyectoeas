@@ -31,9 +31,9 @@ function CountryDetails({ countries, info }) {
 					<p>Area</p>
 					<p>{newCountryInfo.area} km2</p>
 				</div>
-				<div className="border-bottom">
-					<p>Borders</p>
-					<div>
+				<div className="border-bottom d-flex justify-content-around">
+					<p className="d-flex align-items-center">Borders:</p>
+					<div >
 
 						{newCountryInfo.borders.map((country,index) => countries.map(borderCountry => {
 
@@ -71,8 +71,8 @@ function CountryDetails({ countries, info }) {
 					<p>Area</p>
 					<p>{CountryInfo.area} km2</p>
 				</div>
-				<div className="border-bottom">
-					<p>Borders</p>
+				<div className="border-bottom d-flex justify-content-around">
+					<p className="d-flex align-items-center">Borders</p>
 						<div>
 							{CountryInfo.borders.map((country,index) => countries.map(borderCountry => {
 
