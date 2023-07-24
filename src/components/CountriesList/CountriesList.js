@@ -11,7 +11,7 @@ const CountriesList = ({ url }) => {
 		axios.get(url).then(response => {
 			setCountries(response.data)
 		});
-	}, []);
+	}, );
 	const showInformation = (country) => {
 		setCountryChosen(country);
 	}
