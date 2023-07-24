@@ -21,7 +21,7 @@ function CountryDetails({ countries, info }) {
 	if (newCountryInfo.length !== 0) {
 		return (
 			<div id="info" className="w-50 position-fixed top-40 start-50 translate-right">
-				<img className="w-50 p-3" src={`https://flagpedia.net/data/flags/icon/72x54/${newCountryInfo.alpha2Code.toLowerCase()}.png`} alt="countryFlag" />
+				<img className=" p-3" src={`https://flagpedia.net/data/flags/icon/72x54/${newCountryInfo.alpha2Code.toLowerCase()}.png`} alt="countryFlag" />
 				<h3>{newCountryInfo.name.common}</h3>
 				<div className='data border-bottom'>
 					<p>Capital</p>
@@ -35,7 +35,7 @@ function CountryDetails({ countries, info }) {
 					<p className="d-flex align-items-center">Borders:</p>
 					<div >
 
-						{newCountryInfo.borders.map((country,index) => countries.map(borderCountry => {
+						{newCountryInfo.borders.forEach((country,index) => countries.forEach(borderCountry => {
 
 							if (borderCountry.alpha3Code === country) {
 								return (
@@ -60,8 +60,8 @@ function CountryDetails({ countries, info }) {
 	}
 	else if (CountryInfo.length !== 0) {
 		return (
-			<div id="info" className="w-50 position-fixed top-40 start-50 translate-right">
-				<img className="w-50 p-3" src={`https://flagpedia.net/data/flags/icon/72x54/${CountryInfo.alpha2Code.toLowerCase()}.png`} alt="countryFlag" />
+			<div id="info" className="w-50 position-fixed top-30 start-50 translate-right">
+				<img className=" p-3" src={`https://flagpedia.net/data/flags/icon/72x54/${CountryInfo.alpha2Code.toLowerCase()}.png`} alt="countryFlag" />
 				<h3>{CountryInfo.name.common}</h3>
 				<div className='data border-bottom'>
 					<p>Capital</p>
@@ -74,7 +74,7 @@ function CountryDetails({ countries, info }) {
 				<div className="border-bottom d-flex justify-content-around">
 					<p className="d-flex align-items-center">Borders</p>
 						<div>
-							{CountryInfo.borders.map((country,index) => countries.map(borderCountry => {
+							{CountryInfo.borders.forEach((country,index) => countries.forEach(borderCountry => {
 
 								if (borderCountry.alpha3Code === country) {
 									return (
