@@ -1,3 +1,19 @@
-This project consists of displaying a list of countries and then when clicking on one of them, on the side we could see the details from that country, such as its flag, its name, its capital, its area and the countries that surround it.
+# <Wiki - Countries>
 
 Here you can access this work. https://wiki-countrieseas.netlify.app/
+
+## Description
+
+I did this project in order to practice my react knowledge and skills for rendering components when clicked. The purpose on doing it was because i like programming and improving my skills.
+
+A web app for showing information of countries such as Area, Flag, Capital and the bordering countries. And when clicked on the bordering countries it shows that country information.
+
+
+## Badges
+
+
+## Features
+
+If your project has a lot of features, list them here.
+
+
